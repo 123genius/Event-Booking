@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainContent"
+    tools:context=".view.activities.AddHallActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_btn"
+            android:scaleType="fitXY"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="ButtonClick"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:id="@+id/hallImage"
+            android:contentDescription="@string/app_name"
+            tools:ignore="NewApi,UnusedAttribute" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:cardElevation="5dip"
+            android:layout_margin="10dp"
+            tools:ignore="UnusedAttribute">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:hint="@string/hall_name"
+                android:imeOptions="actionNext"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="10dp"
+                android:textAllCaps="false"
+                android:id="@+id/txtName"
+                android:inputType="textPersonName|textCapWords"
+                tools:ignore="Autofill,LabelFor" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:cardElevation="5dip"
+            android:layout_margin="10dp"
+            tools:ignore="UnusedAttribute">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_weight="0.2"
+                    android:layout_height="match_parent"
+                    android:textSize="20sp"
+                    android:text="@string/location_name"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="10dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/location_icon"
+                    android:padding="10dip"
+                    android:onClick="ButtonClick"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_marginHorizontal="10dip"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:id="@+id/btnLocation"
+                    android:contentDescription="@string/app_name" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:cardElevation="5dip"
+            android:layout_margin="10dp"
+            tools:ignore="UnusedAttribute">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:hint="@string/rent_per_day"
+                android:imeOptions="actionNext"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="10dp"
+                android:textAllCaps="false"
+                android:id="@+id/txtRent"
+                android:inputType="number"
+                tools:ignore="Autofill,LabelFor" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:cardElevation="5dip"
+            android:layout_margin="10dp"
+            tools:ignore="UnusedAttribute">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:hint="@string/person_capacity"
+                android:imeOptions="actionNext"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="10dp"
+                android:textAllCaps="false"
+                android:id="@+id/txtCapacity"
+                android:inputType="number"
+                tools:ignore="Autofill,LabelFor" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:cardElevation="5dip"
+            android:layout_margin="10dp"
+            tools:ignore="UnusedAttribute">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:hint="@string/contact_number"
+                android:imeOptions="actionNext"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="10dp"
+                android:textAllCaps="false"
+                android:id="@+id/txtPhone"
+                android:inputType="phone"
+                tools:ignore="Autofill,LabelFor" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:cardElevation="5dip"
+            android:layout_margin="10dp"
+            tools:ignore="UnusedAttribute">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:hint="@string/email"
+                android:imeOptions="actionNext"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="10dp"
+                android:textAllCaps="false"
+                android:id="@+id/txtEmail"
+                android:inputType="textEmailAddress"
+                tools:ignore="Autofill,LabelFor" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:cardElevation="5dip"
+            android:layout_margin="10dp"
+            tools:ignore="UnusedAttribute">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:hint="@string/minimum_capacity"
+                android:imeOptions="actionNext"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="10dp"
+                android:textAllCaps="false"
+                android:id="@+id/txtMinimumCapacity"
+                android:inputType="number"
+                tools:ignore="Autofill,LabelFor" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:cardElevation="5dip"
+            android:layout_margin="10dp"
+            tools:ignore="UnusedAttribute">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:hint="@string/parking_capacity"
+                android:imeOptions="actionNext"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="10dp"
+                android:textAllCaps="false"
+                android:id="@+id/txtParkingCapacity"
+                android:inputType="number"
+                tools:ignore="Autofill,LabelFor" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:cardElevation="5dip"
+            android:layout_margin="10dp"
+            tools:ignore="UnusedAttribute">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:hint="@string/number_of_washrooms"
+                android:imeOptions="actionDone"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="10dp"
+                android:textAllCaps="false"
+                android:id="@+id/txtWashrooms"
+                android:inputType="number"
+                tools:ignore="Autofill,LabelFor" />
+
+        </androidx.cardview.widget.CardView>
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            app:cardElevation="5dip"-->
+<!--            android:layout_margin="10dp"-->
+<!--            tools:ignore="UnusedAttribute">-->
+
+<!--            <Spinner-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layoutMode="opticalBounds"-->
+<!--                android:spinnerMode="dropdown"-->
+<!--                android:id="@+id/statusDropDown"-->
+<!--                android:clickable="true"-->
+<!--                style="?android:attr/spinnerItemStyle"-->
+<!--                android:focusable="true"-->
+<!--                android:backgroundTint="@android:color/black" />-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+    </LinearLayout>
+
+</ScrollView>

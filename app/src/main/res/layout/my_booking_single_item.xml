@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dip"
+    app:cardElevation="2dip"
+    android:id="@+id/mainLayout"
+    app:cardCornerRadius="5dip"
+    tools:actionBarNavMode="list"
+    app:layout_insetEdge="bottom"
+    app:contentPadding="10dip">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:id="@+id/txtHallName"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dip"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dip"
+            android:layout_marginTop="10dip"
+            android:textColor="@android:color/black"
+            android:id="@+id/txtUsername"
+            tools:targetApi="o" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dip"
+            android:layout_marginTop="10dip"
+            android:textColor="@android:color/black"
+            android:id="@+id/txtContactNumber"
+            tools:targetApi="o" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dip"
+            android:layout_marginTop="10dip"
+            android:textColor="@android:color/black"
+            android:id="@+id/txtEventDate"
+            tools:targetApi="o" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dip"
+            android:layout_marginTop="10dip"
+            android:textColor="@android:color/black"
+            android:id="@+id/txtEventTime"
+            tools:targetApi="o" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dip"
+            android:layout_marginTop="10dip"
+            android:textColor="@android:color/black"
+            android:id="@+id/txtMenus"
+            tools:targetApi="o" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dip"
+            android:layout_marginTop="10dip"
+            android:textColor="@android:color/black"
+            android:id="@+id/txtPaymentStatus"
+            tools:targetApi="o" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dip"
+            android:layout_marginTop="10dip"
+            android:textColor="@android:color/black"
+            android:id="@+id/txtTotalBill"
+            tools:targetApi="o" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dip"
+            android:layout_marginTop="10dip"
+            android:textColor="@android:color/black"
+            android:id="@+id/txtGuest"
+            tools:targetApi="o" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dip"
+            android:layout_marginTop="10dip"
+            android:textColor="@android:color/black"
+            android:id="@+id/txtRating"
+            tools:targetApi="o" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dip"
+            android:layout_marginTop="10dip"
+            android:textColor="@android:color/black"
+            android:id="@+id/txtReadReview"
+            tools:targetApi="o" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/layoutOne"
+            tools:targetApi="o">
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dip"
+                android:layout_marginTop="10dip"
+                android:layout_marginBottom="10dip"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:id="@+id/txtEventStatus"
+                tools:targetApi="o" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnEventStatus"
+                android:text="@string/mark_as_done"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/reviewSection"
+            android:layout_marginVertical="8dip">
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:saveEnabled="true"
+                android:layout_gravity="center_horizontal"
+                android:numStars="5"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtReview"
+                    android:hint="@string/type_your_review"
+                    android:maxLines="5"
+                    android:layerType="software"
+                    android:allowUndo="true"
+                    android:inputType="textCapSentences"
+                    android:imeOptions="actionDone"
+                    android:textColor="@android:color/black"
+                    tools:targetApi="m"
+                    android:paddingEnd="40dip"
+                    android:autofillHints=""
+                    tools:ignore="RtlSymmetry" />
+
+                <ImageButton
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:layout_gravity="center_vertical|end"
+                    android:src="@drawable/send_icon"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/app_name"
+                    android:id="@+id/btnSubmit" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

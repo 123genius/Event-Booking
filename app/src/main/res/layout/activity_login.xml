@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorRed"
+    android:id="@+id/mainContent"
+    tools:context=".view.activities.LoginActivity">
+
+    <include layout="@layout/two_color_back_design"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:windowSoftInputMode="adjustResize|adjustPan"
+        android:layout_marginHorizontal="20dip"
+        tools:ignore="UnusedAttribute">
+
+        <include layout="@layout/logo_layout" android:layout_width="170dip" android:layout_height="170dip" android:layout_gravity="center_horizontal" android:layout_marginTop="70dip"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dip"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:backgroundTint="@android:color/white"
+            android:hint="@string/email"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/colorLightWhite"
+            tools:ignore="UnusedAttribute"
+            android:paddingHorizontal="5dip"
+            android:paddingVertical="15dip"
+            android:drawableStart="@drawable/email_icon"
+            android:drawablePadding="10dp"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionNext"
+            android:id="@+id/txtEmail"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/white"
+            android:hint="@string/password"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/colorLightWhite"
+            tools:ignore="UnusedAttribute"
+            android:paddingHorizontal="5dip"
+            android:paddingVertical="15dip"
+            android:drawableStart="@drawable/password_icon"
+            android:drawablePadding="10dp"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
+            android:id="@+id/txtPassword"
+            android:importantForAutofill="no" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="@string/forgot_password"
+            android:textColor="@android:color/white"
+            android:id="@+id/btnForgotPassword"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnLogin"
+            android:text="@string/login"
+            android:onClick="ButtonClick"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_design"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginVertical="20dip">
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="1dip"
+                android:layout_weight="0.4"
+                android:background="@android:color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/or"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:layout_marginHorizontal="8dip"/>
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="1dip"
+                android:layout_weight="0.4"
+                android:background="@android:color/white"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCreatAccount"
+            android:text="@string/signup"
+            android:textAllCaps="false"
+            android:onClick="ButtonClick"
+            android:textColor="@android:color/white"
+            android:background="@drawable/dim_btn_design"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

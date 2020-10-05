@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainContent"
+    tools:context=".view.activities.EditHallInfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="230dip"
+            app:cardElevation="1.5dip"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dip">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="45dip"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:inputType="textCapWords"
+                            android:imeOptions="actionNext"
+                            android:gravity="center"
+                            android:id="@+id/txtName"
+                            android:hint="@string/menu_name"
+                            android:textColor="@android:color/black"
+                            tools:ignore="NestedWeights"
+                            android:importantForAutofill="no" />
+
+                        <Spinner
+                            android:layout_width="5dip"
+                            android:layout_height="match_parent"/>
+
+                        <EditText
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:gravity="center"
+                            android:hint="@string/price"
+                            android:imeOptions="actionDone"
+                            android:id="@+id/txtPrice"
+                            android:textColor="@android:color/black"
+                            android:importantForAutofill="no" />
+
+                        <Spinner
+                            android:layout_width="5dip"
+                            android:layout_height="match_parent"/>
+
+                        <ImageButton
+                            android:layout_width="30dip"
+                            android:layout_height="30dip"
+                            android:src="@drawable/add_image_icon"
+                            android:background="@color/colorRed"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_gravity="center_vertical"
+                            android:onClick="ButtonClick"
+                            android:id="@+id/btnAddImage"
+                            android:foreground="?attr/selectableItemBackground"
+                            tools:targetApi="m"
+                            tools:ignore="UnusedAttribute"
+                            android:contentDescription="@string/app_name" />
+
+                    </LinearLayout>
+
+                    <Spinner
+                        android:layout_width="5dip"
+                        android:layout_height="match_parent"/>
+
+                    <ImageButton
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:src="@drawable/add_icon"
+                        android:background="@color/colorRed"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_gravity="center_vertical"
+                        android:onClick="ButtonClick"
+                        android:id="@+id/btnAddMenu"
+                        android:foreground="?attr/selectableItemBackground"
+                        tools:targetApi="m"
+                        tools:ignore="UnusedAttribute"
+                        android:contentDescription="@string/app_name" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/menuList"
+                    android:layout_marginHorizontal="5dip"
+                    android:layout_marginVertical="10dip"
+                    tools:targetApi="o" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginHorizontal="10dip"
+            android:layout_marginVertical="5dip"
+            app:cardElevation="2dip"
+            tools:targetApi="o">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="10dip"
+                android:hint="@string/hall_name"
+                android:textSize="16sp"
+                android:drawableEnd="@drawable/edit_icon_black"
+                android:textStyle="bold"
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext"
+                android:textColor="@android:color/black"
+                android:id="@+id/txtHallName"
+                tools:targetApi="o"
+                android:importantForAutofill="no" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginHorizontal="10dip"
+            android:layout_marginVertical="5dip"
+            app:cardElevation="2dip"
+            tools:targetApi="o">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="10dip"
+                android:hint="@string/contact_number"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:inputType="phone"
+                android:imeOptions="actionNext"
+                android:textColor="@android:color/black"
+                android:drawableEnd="@drawable/edit_icon_black"
+                android:id="@+id/txtContactNumber"
+                tools:targetApi="o"
+                android:importantForAutofill="no" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginHorizontal="10dip"
+            android:layout_marginVertical="5dip"
+            app:cardElevation="2dip"
+            tools:targetApi="o">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="10dip"
+                android:hint="@string/person_capacity"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:textColor="@android:color/black"
+                android:id="@+id/txtCapacity"
+                android:drawableEnd="@drawable/edit_icon_black"
+                tools:targetApi="o"
+                android:importantForAutofill="no" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginHorizontal="10dip"
+            android:layout_marginVertical="5dip"
+            app:cardElevation="2dip"
+            tools:targetApi="o">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:drawableEnd="@drawable/edit_icon_black"
+                android:paddingHorizontal="10dip"
+                android:hint="@string/minimum_capacity"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:textColor="@android:color/black"
+                android:id="@+id/txtMinimumCapacity"
+                tools:targetApi="o"
+                android:importantForAutofill="no" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginHorizontal="10dip"
+            android:layout_marginVertical="5dip"
+            app:cardElevation="2dip"
+            tools:targetApi="o">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableEnd="@drawable/edit_icon_black"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="10dip"
+                android:hint="@string/parking_capacity"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:textColor="@android:color/black"
+                android:id="@+id/txtParkingCapacity"
+                tools:targetApi="o"
+                android:importantForAutofill="no" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginHorizontal="10dip"
+            android:layout_marginVertical="5dip"
+            app:cardElevation="2dip"
+            tools:targetApi="o">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="10dip"
+                android:hint="@string/number_of_washrooms"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:inputType="textCapWords"
+                android:imeOptions="actionDone"
+                android:drawableEnd="@drawable/edit_icon_black"
+                android:textColor="@android:color/black"
+                android:id="@+id/txtWashrooms"
+                tools:targetApi="o"
+                android:importantForAutofill="no" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginHorizontal="10dip"
+            android:layout_marginVertical="5dip"
+            app:cardElevation="2dip"
+            tools:targetApi="o">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dip"
+                android:gravity="center_vertical"
+                tools:ignore="UnusedAttribute,UseCompoundDrawables">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location"
+                    android:gravity="start"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <ImageView
+                    android:layout_width="35dip"
+                    android:layout_height="35dip"
+                    android:src="@drawable/map_icon_2"
+                    android:onClick="ButtonClick"
+                    android:focusable="true"
+                    android:layout_gravity="start|center_vertical"
+                    android:scaleType="fitXY"
+                    android:clickable="true"
+                    android:layout_marginVertical="5dip"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:id="@+id/btnLocation"
+                    android:contentDescription="@string/app_name" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

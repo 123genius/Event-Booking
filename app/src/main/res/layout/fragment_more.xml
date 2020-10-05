@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dip"
+    tools:context=".view.fragments.MoreFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dip"
+        android:layout_marginHorizontal="5dip"
+        android:layout_marginVertical="5dip"
+        android:outlineAmbientShadowColor="@android:color/black"
+        android:outlineSpotShadowColor="@android:color/black"
+        app:cardCornerRadius="30dip"
+        tools:ignore="UnusedAttribute">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/white"
+            android:background="@null"
+            android:hint="@string/search"
+            android:textSize="20sp"
+            android:paddingHorizontal="10dip"
+            android:paddingVertical="6dip"
+            tools:ignore="TextFields,UnusedAttribute"
+            android:drawableEnd="@drawable/search_icon"
+            android:drawablePadding="10dp"
+            android:inputType="textCapWords|textPersonName"
+            android:imeOptions="actionSearch"
+            android:id="@+id/txtPassword"
+            android:importantForAutofill="no" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/menusList"
+        android:layout_marginTop="10dip" />
+
+
+</LinearLayout>

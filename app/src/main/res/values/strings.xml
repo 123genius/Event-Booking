@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Event Booking</string>
+    <string name="admin">Admin</string>
+    <string name="user">User</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="login">Login</string>
+    <string name="or">or</string>
+    <string name="signup">Signup</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="create_account">Create Account</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="record_history">Record History</string>
+    <string name="invite">Invite</string>
+    <string name="setting">Setting</string>
+    <string name="logout">Logout</string>
+    <string name="user_name">User Name</string>
+    <string name="search">Search...</string>
+    <string name="hall_name">Hall Name</string>
+    <string name="location_name">Location Name</string>
+    <string name="person_capacity">Person\'s Capacity</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="minimum_capacity">Minimum Capacity</string>
+    <string name="parking_capacity">Parking Capacity</string>
+    <string name="number_of_washrooms">Number of Washrooms</string>
+    <string name="add_hall">Add Hall</string>
+    <string name="submit">Submit</string>
+    <string name="select_location">Select Location</string>
+    <string name="google_maps_key">AIzaSyDxb9LZJfTxeigWpOrUHRYIYPwN2Fw9iqQ</string>
+    <string name="default_info_title">Default Location</string>
+    <string name="default_info_snippet">No places found, because location permission is disabled.</string>
+    <string name="option_get_place">Get place</string>
+    <string name="pick_place">Choose a place</string>
+    <string name="select_status">Select Status</string>
+    <string name="junaid_durrani">Junaid Durrani</string>
+    <string name="kohat_hall">Kohat Hall</string>
+    <string name="available">Available</string>
+    <string name="near_jarwanda">Near Jarwanda</string>
+    <string name="by_junaid_durrani">By Junaid Durrani</string>
+    <string name="location">Location:</string>
+    <string name="owner_s_name">Owner\'s Name</string>
+    <string name="book_now">Book Now</string>
+    <string name="alreadyBooked">Already Booked</string>
+    <string name="edit">Edit Information</string>
+    <string name="add_menu">Add Menu</string>
+    <string name="menu_name">Menu Name</string>
+    <string name="price">Price</string>
+    <string name="status">Status</string>
+    <string name="menus">Menus</string>
+    <string name="marriage_hall_booking">Marriage Hall Booking</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="number_of_guests">Number of Guests</string>
+    <string name="total_bill">Total Bill</string>
+    <string name="select_booking_date">Select Booking Date</string>
+    <string name="select_booking_time">Select Booking Time</string>
+    <string name="number_of_guest">Number of Guest</string>
+    <string name="select_menu">Select Menu</string>
+    <string name="rent_per_day">Rent Per Day</string>
+    <string name="booking_requests">Booking Requests</string>
+    <string name="view_details">View Details</string>
+    <string name="delete">Delete</string>
+    <string name="confirm">Confirm</string>
+    <string name="respond">Respond</string>
+    <string name="my_bookings">My Bookings</string>
+    <string name="mark_as_done">Mark As Done</string>
+    <string name="done">Done</string>
+    <string name="type_your_review">Type Your Review</string>
+    <string name="rating">Rating</string>
+
+</resources>

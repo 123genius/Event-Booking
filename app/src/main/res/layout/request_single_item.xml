@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="120dip"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:id="@+id/mainContent"
+    android:layout_marginHorizontal="10dip"
+    android:layout_marginVertical="5dip"
+    tools:targetApi="m"
+    app:cardElevation="2dip"
+    app:cardCornerRadius="5dip"
+    tools:ignore="UnusedAttribute">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dip"
+        android:paddingVertical="15dip">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dip"
+            android:layout_height="80dip"
+            android:id="@+id/userImage"
+            android:contentDescription="@string/app_name"
+            app:civ_border_color="@color/colorRed"
+            app:civ_border_width="2dip"
+            app:civ_border_overlay="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="8dip"
+            tools:targetApi="o">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTitle"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dip"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDateTime"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorLightWhite"
+    tools:context=".view.activities.RequestViewActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dip"
+        android:background="@color/colorRed"
+        android:paddingTop="20dip"
+        app:elevation="1dip"
+        android:elevation="1dip"
+        android:paddingHorizontal="1dip"
+        tools:ignore="UnusedAttribute">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:id="@+id/btnBack"
+                android:layout_marginTop="1dip"
+                android:onClick="ButtonClick"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:src="@drawable/back_arrow_icon"
+                android:contentDescription="@string/app_name"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dip"
+                android:layout_gravity="bottom"
+                android:background="@color/colorLightWhite"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                app:civ_border_width="4dp"
+                android:src="@color/colorBlue"
+                android:layout_margin="10dip"
+                app:civ_border_color="@android:color/white"/>
+
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="10dip"
+        tools:targetApi="o">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:id="@+id/txtName"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginTop="10dip"
+                android:layout_marginHorizontal="5dip"
+                android:text="@string/respond"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:id="@+id/btnRespond"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_design"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                android:textAllCaps="false"
+                android:layout_marginTop="10dip"
+                android:id="@+id/btnDelete"
+                android:layout_marginHorizontal="5dip"
+                tools:targetApi="o"
+                tools:ignore="ButtonStyle" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dip"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dip"
+                android:layout_marginTop="10dip"
+                android:drawableStart="@drawable/phone_icon"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:drawablePadding="10dip"
+                android:textColor="@android:color/black"
+                android:id="@+id/txtContactNumber"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dip"
+                android:layout_marginTop="10dip"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:drawablePadding="10dip"
+                android:textColor="@android:color/black"
+                android:drawableStart="@drawable/hall_icon"
+                android:id="@+id/txtHallName"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dip"
+                android:drawableStart="@drawable/date_icon"
+                android:layout_marginTop="10dip"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:drawablePadding="10dip"
+                android:textColor="@android:color/black"
+                android:id="@+id/txtDate"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dip"
+                android:layout_marginTop="10dip"
+                android:drawableStart="@drawable/time_icon"
+                android:drawablePadding="10dip"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                
+                android:textColor="@android:color/black"
+                android:id="@+id/txtTime"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dip"
+                android:layout_marginTop="10dip"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                
+                android:drawableStart="@drawable/guest_icon"
+                android:drawablePadding="10dip"
+                android:textColor="@android:color/black"
+                android:id="@+id/txtGuest"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dip"
+                android:layout_marginTop="10dip"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                
+                android:drawableStart="@drawable/menu_icon2"
+                android:drawablePadding="10dip"
+                android:textColor="@android:color/black"
+                android:id="@+id/txtMenus"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dip"
+                android:layout_marginTop="10dip"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                
+                android:drawableStart="@drawable/bill_icon"
+                android:drawablePadding="10dip"
+                android:textColor="@android:color/black"
+                android:id="@+id/txtBill"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

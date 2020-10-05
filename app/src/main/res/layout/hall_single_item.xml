@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        app:cardElevation="5dip"
+        android:id="@+id/mainLayout"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_margin="10dip"
+        app:cardCornerRadius="10dip"
+        tools:ignore="UnusedAttribute">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                android:id="@+id/hallImage"
+                android:transitionName="example_transition"
+                android:contentDescription="@string/app_name"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dip"
+                android:orientation="horizontal"
+                android:background="@color/colorRed"
+                android:alpha="0.8"
+                android:gravity="center_vertical"
+                android:padding="8dip"
+                android:layout_gravity="bottom|center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="65dip"
+                    android:layout_height="65dip"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="centerCrop"
+                    app:civ_border_color="@android:color/white"
+                    app:civ_border_width="2.5dip"
+                    app:civ_border_overlay="true"
+                    android:id="@+id/profileImage"/>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_weight="0.75"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="10dip"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:id="@+id/txtHallName"
+                        android:text="@string/kohat_hall"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"/>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="2dip"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:id="@+id/txtOwnerName"
+                        android:text="@string/by_junaid_durrani"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:gravity="bottom|end"
+                        android:text="@string/available"
+                        android:textSize="18sp"
+                        android:id="@+id/txtStatus"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

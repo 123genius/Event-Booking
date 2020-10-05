@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.eventbooking">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".view.activities.FeedbacksActivity" android:parentActivityName=".view.activities.MainActivity" android:theme="@style/AppTheme3" />
+        <activity
+            android:name=".view.activities.RecordDetailsActivity"
+            android:parentActivityName=".view.activities.MainActivity"
+            android:theme="@style/AppTheme3" />
+        <activity
+            android:name=".view.activities.MyBookingsActivity"
+            android:label="@string/my_bookings"
+            android:parentActivityName=".view.activities.MainActivity"
+            android:theme="@style/AppTheme3" />
+        <activity
+            android:name=".view.activities.RequestViewActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".view.activities.BookingActivity"
+            android:parentActivityName=".view.activities.HallViewActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".view.activities.EditHallInfoActivity"
+            android:label="Edit Information"
+            android:parentActivityName=".view.activities.HallViewActivity"
+            android:theme="@style/AppTheme3" />
+        <activity android:name=".view.activities.MapViewActivity" />
+        <activity
+            android:name=".view.activities.HallViewActivity"
+            android:theme="@style/AppTheme4" />
+        <activity
+            android:name=".view.activities.MapActivity"
+            android:label="@string/select_location"
+            android:parentActivityName=".view.activities.AddHallActivity"
+            android:theme="@style/AppTheme3" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".view.activities.AddHallActivity"
+            android:label="@string/add_hall"
+            android:parentActivityName=".view.activities.MainActivity"
+            android:theme="@style/AppTheme3" />
+        <activity android:name=".view.activities.EditProfileActivity" />
+        <activity
+            android:name=".view.activities.RootActivity"
+            android:theme="@style/AppTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activities.AuthenticationActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".view.activities.MainActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".view.activities.LoginActivity"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".view.activities.RegisterActivity"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+    </application>
+
+</manifest>
